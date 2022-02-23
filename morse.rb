@@ -6,7 +6,7 @@ MORSE_CODE = {
   '--.-' => 'Q', '.-.' => 'R', '...' => 'S', '-' => 'T',
   '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X',
   '-.--' => 'Y', '--..' => 'Z'
-}
+}.freeze
 
 def decode_char(char)
   MORSE_CODE[char]
@@ -19,3 +19,15 @@ def decode_word(word)
   end
   arr.join
 end
+
+def decode_message(morse_code)
+  morse_code
+    .split('   ')
+    .map do |word|
+      decode_word(word)
+    end
+    .join(' ')
+end
+puts decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...')
+
+# A BOX FULL OFRUBIES
