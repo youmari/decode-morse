@@ -28,6 +28,4 @@ def decode_message(morse_code)
     end
     .join(' ')
 end
-puts decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...')
 
-# A BOX FULL OFRUBIES
