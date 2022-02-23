@@ -28,4 +28,3 @@ def decode_message(morse_code)
     end
     .join(' ')
 end
-
